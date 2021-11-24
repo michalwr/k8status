@@ -8,7 +8,9 @@ import (
 	"k8s.io/client-go/tools/clientcmd"
 )
 
-func getConfig() (clientset *kubernetes.Clientset) {
+
+
+func (k KubernetesCluster) getConfig() (clientset *kubernetes.Clientset) {
 	dirname, _ := os.UserHomeDir()
 
 	config, _ := clientcmd.BuildConfigFromFlags("", dirname+"/.kube/config")

@@ -14,4 +14,5 @@ func DrawHeader(s tcell.Screen,x1 int, y1 int, x2 int, y2 int) {
 	}
 	label:="K8s Status"
 	drawText(s, x2/2, y1+1, x2, y2+1, style, label)
+	s.Show()
 }
